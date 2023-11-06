@@ -1,6 +1,6 @@
 import { plantList } from '../datas/plantList';
 import '../styles/ShoppingList.css';
-import PlantItem from './PlantItem';
+import { PlantItem } from './PlantItem.js';
 
 function ShoppingList () {
   // empty array is the result format

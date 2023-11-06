@@ -1,9 +1,13 @@
 import '../styles/PlantItem.css';
 import CareScale from './CareScale';
 
-export default function PlantItem({id, cover, name, light, water, isSpecialOffer, isBestSale, category}) {
+function handleClick(plantName) {
+  alert(`Want to buy this ${plantName}?`)
+}
+
+function PlantItem({id, cover, name, light, water, isSpecialOffer, isBestSale, category}) {
   return(
-    <li key={id} className='jh-plant-item'>
+    <li key={id} className='jh-plant-item' onClick={() => handleClick(name)}>
       <img src={cover} alt={`${name}-cover`} className='jh-plant-item-cover'/>
       {name}
       {isSpecialOffer && <div className="jh-sales">Sale</div>}
@@ -15,3 +19,5 @@ export default function PlantItem({id, cover, name, light, water, isSpecialOffer
     </li>
   )
 }
+
+export {PlantItem}
