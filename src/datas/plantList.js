@@ -1,4 +1,12 @@
 import monstera from '../assets/monstera.jpg';
+import lyrata from '../assets/lyrata.jpg';
+import pothos from '../assets/pothos.jpg';
+import succulent from '../assets/succulent.jpg';
+import olive from '../assets/olive.jpg';
+import basil from '../assets/basil.jpg';
+import mint from '../assets/mint.jpg';
+import calathea from '../assets/calathea.jpg';
+import cactus from '../assets/cactus.jpg';
 
 export const plantList = [
 	{
@@ -9,7 +17,8 @@ export const plantList = [
     isSpecialOffer: true,
     water: 2,
     light: 1,
-    cover: monstera
+    cover: monstera,
+    price: 8
 	},
 	{
 		name: 'ficus lyrata',
@@ -19,7 +28,8 @@ export const plantList = [
     isSpecialOffer: true,
     water: 2,
     light: 3,
-    cover: monstera
+    cover: lyrata,
+    price: 10
 	},
 	{
 		name: 'silver pothos',
@@ -29,7 +39,8 @@ export const plantList = [
     isSpecialOffer: false,
     water: 1,
     light: 2,
-    cover: monstera
+    cover: pothos,
+    price: 7
 	},
 	{
 		name: 'yucca',
@@ -39,7 +50,8 @@ export const plantList = [
     isSpecialOffer: false,
     water: 3,
     light: 1,
-    cover: monstera
+    cover: mint,
+    price: 5
 	},
 	{
 		name: 'olive tree',
@@ -49,7 +61,8 @@ export const plantList = [
     isSpecialOffer: false,
     water: 1,
     light: 3,
-    cover: monstera
+    cover: olive,
+    price: 15
 	},
 	{
 		name: 'geranium',
@@ -59,7 +72,8 @@ export const plantList = [
     isSpecialOffer: true,
     water: 3,
     light: 2,
-    cover: monstera
+    cover: calathea,
+    price: 12
 	},
 	{
 		name: 'basil',
@@ -69,7 +83,8 @@ export const plantList = [
     isSpecialOffer: false,
     water: 3,
     light: 2,
-    cover: monstera
+    cover: basil,
+    price: 6
 	},
 	{
 		name: 'aloe',
@@ -79,7 +94,8 @@ export const plantList = [
     isSpecialOffer: false,
     water: 1,
     light: 1,
-    cover: monstera
+    cover: cactus,
+    price: 4
 	},
 	{
 		name: 'succulent',
@@ -89,6 +105,7 @@ export const plantList = [
     isSpecialOffer: true,
     water: 1,
     light: 3,
-    cover: monstera
+    cover: succulent,
+    price: 9
 	}
 ]

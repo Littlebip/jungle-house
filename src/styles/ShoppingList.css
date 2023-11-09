@@ -3,7 +3,11 @@
 	padding: 32px;
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 800px;
+	justify-content: center;
+}
+
+.jh-shopping-list {
+  width: 100%;
 }
 
 .jh-sales {
