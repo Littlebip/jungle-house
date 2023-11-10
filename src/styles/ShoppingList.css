@@ -12,10 +12,10 @@
 
 .jh-sales {
 	position: absolute;
-	right: 0px;
+	left: 0px;
 	top: 20px;
 	font-weight: 500;
 	color: white;
 	padding: 5px 10px;
-	background-color: #31b572;
+	background-color: #227c4f;
 }

@@ -1,5 +1,6 @@
 import sun from '../assets/sun.svg';
 import water from '../assets/water.svg';
+import '../styles/CareScale.css'
 
 function CareScale({scaleValue, careType}) {
   // alternatively can also declare const {scaleValue, careType} = props.value
@@ -18,7 +19,7 @@ function CareScale({scaleValue, careType}) {
     //  1: 'little', 2: 'moderate', 3: 'large'} then call quantityLabel[scaleValue]
 
   return (
-    <div onClick={() => alert(careMessage)}>
+    <div onClick={() => alert(careMessage)} className='care-scale'>
       {range.map((rangeElement) =>
         scaleValue >= rangeElement ? (
           <span key={rangeElement.toString()}>{scaleType}</span>

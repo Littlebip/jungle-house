@@ -14,3 +14,14 @@
 	text-transform: capitalize;
   position: relative;
 }
+
+.jh-plant-item-price {
+	position: absolute;
+	border-radius: 0 0 0 20px;
+	background-color: #31b472;
+	color: white;
+	padding: 15px 20px;
+	right: 0;
+	top: 0;
+	font-weight: 500;
+}

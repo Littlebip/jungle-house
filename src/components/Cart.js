@@ -1,11 +1,23 @@
 import '../styles/Cart.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Cart({ cart, updateCart}) {
   const [isOpen, setOpen] = useState(false);
   const total = cart.reduce((accumulator, {price, amount}) => (
     accumulator + (price * amount)
   ), 0)
+
+  useEffect(() => {
+    document.title = `${total}€ to pay`
+  }, [total])
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart])
+
+  useEffect(() => {
+    updateCart(JSON.parse(localStorage.getItem('cart')))
+  }, [])
 
   return isOpen ? (
       <div className='jh-cart'>
@@ -23,7 +35,6 @@ function Cart({ cart, updateCart}) {
             <h3>Total: {total}€</h3>
             <button onClick={() => updateCart([])}>Clear cart</button>
           </div>
-
         ) : (
           <div>You cart is empty.</div>
         )}
@@ -42,5 +53,3 @@ function Cart({ cart, updateCart}) {
 }
 
 export default Cart
-
-        /* show total price */
