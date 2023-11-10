@@ -4,10 +4,16 @@ import Cart from './Cart';
 import Category from './Category';
 import ShoppingList from './ShoppingList';
 import Footer from './Footer';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
-  const [cart, updateCart] = useState([]);
+  const savedCart = localStorage.getItem('cart');
+  const [cart, updateCart] = useState(savedCart ? JSON.parse(savedCart) : []);
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart])
+
   const [chosenCategory, changeCategory] = useState('');
 
   return (<div>

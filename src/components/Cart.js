@@ -11,14 +11,6 @@ function Cart({ cart, updateCart}) {
     document.title = `${total}€ to pay`
   }, [total])
 
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart))
-  }, [cart])
-
-  useEffect(() => {
-    updateCart(JSON.parse(localStorage.getItem('cart')))
-  }, [])
-
   return isOpen ? (
       <div className='jh-cart'>
         <button className='jh-cart-toggle-button' onClick={() => setOpen(false)}>Close cart</button>
