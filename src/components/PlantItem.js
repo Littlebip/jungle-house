@@ -12,7 +12,7 @@ function PlantItem({id, cover, name, light, water, isSpecialOffer, isBestSale, c
       {name}
       {isSpecialOffer && <div className="jh-sales">Sale</div>}
       <div className='jh-plant-item-price'>{price}€</div>
-      <div>
+      <div className="care-values">
         <CareScale careType='light' scaleValue={light} />
         <CareScale careType='water' scaleValue={water} />
       </div>

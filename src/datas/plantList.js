@@ -43,7 +43,7 @@ export const plantList = [
     price: 7
 	},
 	{
-		name: 'yucca',
+		name: 'mint',
 		category: 'classic',
 		id: '4kk',
     isBestSale: false,
@@ -65,7 +65,7 @@ export const plantList = [
     price: 15
 	},
 	{
-		name: 'geranium',
+		name: 'calathea',
 		category: 'exterior',
 		id: '6uo',
     isBestSale: false,
@@ -87,7 +87,7 @@ export const plantList = [
     price: 6
 	},
 	{
-		name: 'aloe',
+		name: 'cactus',
 		category: 'succulent',
 		id: '8fp',
     isBestSale: false,
@@ -98,7 +98,7 @@ export const plantList = [
     price: 4
 	},
 	{
-		name: 'succulent',
+		name: 'aloe vera',
 		category: 'succulent',
 		id: '9vn',
     isBestSale: false,

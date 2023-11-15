@@ -1,6 +1,8 @@
 import { plantList } from '../datas/plantList';
 import '../styles/ShoppingList.css';
 import { PlantItem } from './PlantItem.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartPlus} from '@fortawesome/free-solid-svg-icons'
 
 function ShoppingList ({cart, updateCart, chosenCategory, changeCategory}) {
   // add to cart function: check if the item is already present in the cart
@@ -19,9 +21,6 @@ function ShoppingList ({cart, updateCart, chosenCategory, changeCategory}) {
   const currentCategoryItems = (chosenCategory === '') ? plantList : (plantList.filter((plant) => plant.category === chosenCategory));
 
   return (
-
-
-
     <div className='jh-shopping-list'>
       <ul className='jh-plant-list'>
         {currentCategoryItems.map(({id, cover, name, light, water, isSpecialOffer, isBestSale, category, price}) => (
@@ -37,7 +36,9 @@ function ShoppingList ({cart, updateCart, chosenCategory, changeCategory}) {
               isBestSale={isBestSale}
               category={category}
             />
-            <button onClick={() => addToCart(name, price)}>Add</button>
+            <button onClick={() => addToCart(name, price)} className="add-item-button">
+              <FontAwesomeIcon icon={faCartPlus} />
+            </button>
           </div>
         ))}
       </ul>
