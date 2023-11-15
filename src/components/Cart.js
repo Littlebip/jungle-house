@@ -1,5 +1,8 @@
 import '../styles/Cart.css';
 import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark, faSnowplow, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+
 
 function Cart({ cart, updateCart}) {
   const [isOpen, setOpen] = useState(false);
@@ -13,22 +16,32 @@ function Cart({ cart, updateCart}) {
 
   return isOpen ? (
       <div className='jh-cart'>
-        <button className='jh-cart-toggle-button' onClick={() => setOpen(false)}>Close cart</button>
 
         {/* display the cart content only if it is not empty */}
         {cart.length > 0 ? (
           <div>
-            <h2>Cart</h2>
+            <div className='jh-cart-header'>
+              <button className='jh-cart-toggle-button' onClick={() => setOpen(false)}>
+                <FontAwesomeIcon icon={faXmark} />
+              </button>
+              <h2>Cart</h2>
+            </div>
+
             <ul className='jh-cart-items-list'>
               {cart.map(({name, price, amount}, index) => (
                 <li key={`item-${index}`}><span className='jh-cart-item-name'>{name}</span> {price}€ x {amount}</li>
               ))}
             </ul>
             <h3>Total: {total}€</h3>
-            <button onClick={() => updateCart([])}>Clear cart</button>
+            <button onClick={() => updateCart([])}><FontAwesomeIcon icon={faSnowplow} /></button>
           </div>
         ) : (
-          <div>You cart is empty.</div>
+          <div>
+            <button className='jh-cart-toggle-button' onClick={() => setOpen(false)}>
+              <FontAwesomeIcon icon={faXmark} />
+            </button>
+            <div>You cart is empty.</div>
+          </div>
         )}
 
       </div>
@@ -38,7 +51,7 @@ function Cart({ cart, updateCart}) {
         className='jh-cart-toggle-button'
         onClick={() => setOpen(true)}
       >
-        Open cart
+        <FontAwesomeIcon icon={faCartShopping} />
       </button>
     </div>
     )

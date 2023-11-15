@@ -19,9 +19,9 @@ function App() {
   return (<div>
             <Banner />
             <div className='main-content'>
-              <Cart cart={cart} updateCart={updateCart} />
               <Category chosenCategory={chosenCategory} changeCategory={changeCategory}/>
               <ShoppingList cart={cart} updateCart={updateCart} chosenCategory={chosenCategory} changeCategory={changeCategory} />
+              <Cart cart={cart} updateCart={updateCart} />
             </div>
             <Footer />
           </div>)

@@ -1,8 +1,11 @@
-/* .jh-categories {
-	text-align: center;
-	padding-top: 30px;
+.jh-categories {
+  display: flex;
+  height: 50px;
 }
 
-.jh-categories-select {
-	margin-right: 15px;
-} */
+.jh-categories > button {
+  width: 100px;
+  background-color: #31b572;
+  border: none;
+  border-radius: 0 20px 20px 0;
+}

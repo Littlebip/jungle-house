@@ -17,28 +17,36 @@
 
 .jh-plant-item-price {
 	position: absolute;
-	border-radius: 0 0 0 20px;
-	background-color: #31b472;
-	color: white;
-	padding: 15px 20px;
-	left: 0;
-	bottom: 110px;
-	font-weight: 500;
+	border-radius: 20px 20px 0 0;
+	background-color: white;
+	color: #31b472;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+	padding-top: 15px;
+  padding-bottom: 0;
+	left: 10px;
+	bottom: 128px;
+	font-weight: 700;
 }
 
 .add-item-button {
-  border-radius: 15%;
   background-color: #31b472;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border: none;
-  border-radius: 0 0 20px;
+  border-radius: 20px 20px 0 0;
   color: white;
   font-size: larger;
   cursor: pointer;
-  transform: translate(198px, -88px);
+  transform: translate(188px, -185px);
 }
 
 .care-values {
   display: flex;
-  transform: translate(20px);
+  flex-direction: column;
+  transform: translate(10px, -290px);
+}
+
+.jh-plant-item-name {
+  font-weight: 700;
 }

@@ -1,5 +1,5 @@
   import { plantList } from "../datas/plantList";
-  // import { useState } from 'react';
+ import '../styles/Category.css'
 
   export default function Category({chosenCategory, changeCategory}) {
     // empty array is the result format
@@ -11,7 +11,7 @@
     )
 
     return (
-      <div>
+      <div className='jh-categories'>
         <select name='category' id='category-select' onChange={(event) => changeCategory(event.target.value)}>
           <option value=''>Choose a category</option>
           {categories.map((category, index) => (

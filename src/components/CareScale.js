@@ -7,9 +7,9 @@ function CareScale({scaleValue, careType}) {
   // eq to const scaleValue = props.scaleValue and const careType = props.careType
   const range = [1, 2, 3]
   const scaleType = (careType === 'light' ? (
-    <img src={sun} alt='sun-icon' />
+    <img src={sun} alt='sun-icon' className="care-logo" />
   ) : (
-    <img src={water} alt='water-icon' />)
+    <img src={water} alt='water-icon' className="care-logo" />)
   )
   let careMessage = `This plant requires a ${
     scaleValue === 1 ? 'small' : (scaleValue === 2 ? 'moderate' : 'large')

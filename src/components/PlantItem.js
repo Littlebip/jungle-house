@@ -9,14 +9,14 @@ function PlantItem({id, cover, name, light, water, isSpecialOffer, isBestSale, c
   return(
     <li key={id} className='jh-plant-item' onClick={() => handleClick(name)}>
       <img src={cover} alt={`${name}-cover`} className='jh-plant-item-cover'/>
-      {name}
+      <p className='jh-plant-item-name'>{name}</p>
       {isSpecialOffer && <div className="jh-sales">Sale</div>}
       <div className='jh-plant-item-price'>{price}€</div>
       <div className="care-values">
         <CareScale careType='light' scaleValue={light} />
         <CareScale careType='water' scaleValue={water} />
       </div>
-      {(isBestSale || category === 'classic') && <span>🔥</span>}
+      {/* {(isBestSale || category === 'classic') && <span>🔥</span>} */}
     </li>
   )
 }
